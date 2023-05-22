@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Result</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="{{ url_for('static', path='/main.css') }}" rel="stylesheet">
+</head>
+<body>
+    <center>
+
+
+        <div class="logo-result">
+            <img alt="Schoogle" src="{{ url_for('static', path='/logo.png')}}">
+        </div>
+
+        <video width="500px" height="500px" controls="controls"/>
+            <source src="{{ url_for('static', path='/' + file_name ) }}" type="video/mp4">
+        </video>
+
+        <br>
+        <div class="buttons">
+        <button class="button" download="{{ file_name }}" href="{{ url_for('static', path='/' + file_name ) }}" id="download_link"> Download Video </button>
+        </div>
+
+    </center>
+</body>
+</html>
